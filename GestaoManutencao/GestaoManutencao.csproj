@@ -62,11 +62,29 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\frmAcessoAnalista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\frmAcessoAnalista.Designer.cs">
+      <DependentUpon>frmAcessoAnalista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\frmAlta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Visual\frmAlta.Designer.cs">
       <DependentUpon>frmAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\frmCadastrarPecas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\frmCadastrarPecas.Designer.cs">
+      <DependentUpon>frmCadastrarPecas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\frmLancarProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\frmLancarProducao.Designer.cs">
+      <DependentUpon>frmLancarProducao.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\frmNormal.cs">
       <SubType>Form</SubType>
@@ -169,8 +187,17 @@
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visual\frmAcessoAnalista.resx">
+      <DependentUpon>frmAcessoAnalista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visual\frmAlta.resx">
       <DependentUpon>frmAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\frmCadastrarPecas.resx">
+      <DependentUpon>frmCadastrarPecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\frmLancarProducao.resx">
+      <DependentUpon>frmLancarProducao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\frmNormal.resx">
       <DependentUpon>frmNormal.cs</DependentUpon>
@@ -249,7 +276,6 @@
   <ItemGroup>
     <Folder Include="Modelo\" />
     <Folder Include="Negocio\" />
-    <Folder Include="Ordens\" />
     <Folder Include="Relatorio\" />
     <Folder Include="Utilidade\" />
     <Folder Include="Validacao\" />

@@ -39,6 +39,8 @@
             this.txtSenha = new MetroFramework.Controls.MetroTextBox();
             this.btnAcessarManu = new MetroFramework.Controls.MetroButton();
             this.btnAcessarProd = new MetroFramework.Controls.MetroButton();
+            this.btnAnalista = new MetroFramework.Controls.MetroButton();
+            this.btnCoordenação = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // btnNovoUsuario
@@ -102,7 +104,7 @@
             // 
             // btnAcessarManu
             // 
-            this.btnAcessarManu.Location = new System.Drawing.Point(388, 221);
+            this.btnAcessarManu.Location = new System.Drawing.Point(333, 208);
             this.btnAcessarManu.Name = "btnAcessarManu";
             this.btnAcessarManu.Size = new System.Drawing.Size(125, 39);
             this.btnAcessarManu.TabIndex = 7;
@@ -111,18 +113,37 @@
             // 
             // btnAcessarProd
             // 
-            this.btnAcessarProd.Location = new System.Drawing.Point(388, 286);
+            this.btnAcessarProd.Location = new System.Drawing.Point(333, 268);
             this.btnAcessarProd.Name = "btnAcessarProd";
             this.btnAcessarProd.Size = new System.Drawing.Size(125, 39);
             this.btnAcessarProd.TabIndex = 8;
             this.btnAcessarProd.Text = "Acessar produção";
             this.btnAcessarProd.Click += new System.EventHandler(this.btnAcessarProd_Click);
             // 
+            // btnAnalista
+            // 
+            this.btnAnalista.Location = new System.Drawing.Point(493, 208);
+            this.btnAnalista.Name = "btnAnalista";
+            this.btnAnalista.Size = new System.Drawing.Size(125, 39);
+            this.btnAnalista.TabIndex = 9;
+            this.btnAnalista.Text = "Acessar Analista";
+            this.btnAnalista.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // btnCoordenação
+            // 
+            this.btnCoordenação.Location = new System.Drawing.Point(493, 268);
+            this.btnCoordenação.Name = "btnCoordenação";
+            this.btnCoordenação.Size = new System.Drawing.Size(125, 39);
+            this.btnCoordenação.TabIndex = 10;
+            this.btnCoordenação.Text = "Acessar Coordenação";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 480);
+            this.ClientSize = new System.Drawing.Size(743, 535);
+            this.Controls.Add(this.btnCoordenação);
+            this.Controls.Add(this.btnAnalista);
             this.Controls.Add(this.btnAcessarProd);
             this.Controls.Add(this.btnAcessarManu);
             this.Controls.Add(this.txtSenha);
@@ -153,6 +174,8 @@
         private MetroFramework.Controls.MetroTextBox txtSenha;
         private MetroFramework.Controls.MetroButton btnAcessarManu;
         private MetroFramework.Controls.MetroButton btnAcessarProd;
+        private MetroFramework.Controls.MetroButton btnAnalista;
+        private MetroFramework.Controls.MetroButton btnCoordenação;
     }
 }
 
