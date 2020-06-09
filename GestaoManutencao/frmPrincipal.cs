@@ -61,7 +61,21 @@ namespace GestaoManutencao
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            frmAcessoAnalista f = new frmAcessoAnalista();
+            f.ShowDialog();
+            f.Dispose();
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAcessar_Click_1(object sender, EventArgs e)
+        {
+            frmTelaDeLogin f = new frmTelaDeLogin();
+            f.ShowDialog();
+            f.Dispose();
         }
     }
 }

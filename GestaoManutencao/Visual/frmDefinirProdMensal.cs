@@ -11,19 +11,14 @@ using MetroFramework.Forms;
 
 namespace GestaoManutencao.Visual
 {
-    public partial class frmAbrirOrdem : MetroForm
+    public partial class frmDefinirProdMensal : MetroForm
     {
-        public frmAbrirOrdem()
+        public frmDefinirProdMensal()
         {
             InitializeComponent();
         }
 
-        private void frmAbrirOrdem_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTextBox1_Click(object sender, EventArgs e)
+        private void frmDefinirProdMensal_Load(object sender, EventArgs e)
         {
 
         }

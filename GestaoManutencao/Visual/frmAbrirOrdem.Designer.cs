@@ -46,6 +46,12 @@
             this.txtDescricaoOrdem = new MetroFramework.Controls.MetroTextBox();
             this.btnSalvarOrdem = new MetroFramework.Controls.MetroButton();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.txtDataEntrada = new MetroFramework.Controls.MetroTextBox();
+            this.txtDataEncerramento = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.txtEquipamento = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -122,7 +128,7 @@
             // 
             // txtNumOrdemdeServico
             // 
-            this.txtNumOrdemdeServico.Location = new System.Drawing.Point(173, 78);
+            this.txtNumOrdemdeServico.Location = new System.Drawing.Point(173, 75);
             this.txtNumOrdemdeServico.Name = "txtNumOrdemdeServico";
             this.txtNumOrdemdeServico.Size = new System.Drawing.Size(75, 23);
             this.txtNumOrdemdeServico.TabIndex = 8;
@@ -164,7 +170,7 @@
             // 
             // txtTipoOrdem
             // 
-            this.txtTipoOrdem.Location = new System.Drawing.Point(173, 162);
+            this.txtTipoOrdem.Location = new System.Drawing.Point(173, 159);
             this.txtTipoOrdem.Name = "txtTipoOrdem";
             this.txtTipoOrdem.Size = new System.Drawing.Size(197, 23);
             this.txtTipoOrdem.TabIndex = 15;
@@ -178,7 +184,7 @@
             // 
             // btnSalvarOrdem
             // 
-            this.btnSalvarOrdem.Location = new System.Drawing.Point(313, 465);
+            this.btnSalvarOrdem.Location = new System.Drawing.Point(654, 488);
             this.btnSalvarOrdem.Name = "btnSalvarOrdem";
             this.btnSalvarOrdem.Size = new System.Drawing.Size(150, 70);
             this.btnSalvarOrdem.TabIndex = 17;
@@ -187,17 +193,72 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(387, 162);
+            this.metroLabel9.Location = new System.Drawing.Point(451, 162);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(365, 20);
             this.metroLabel9.TabIndex = 18;
             this.metroLabel9.Text = "Ordem corretiva, ordem programada ou inspeção técnica";
             // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(283, 253);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(111, 20);
+            this.metroLabel10.TabIndex = 19;
+            this.metroLabel10.Text = "Data de entrada:";
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(496, 253);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(152, 20);
+            this.metroLabel11.TabIndex = 20;
+            this.metroLabel11.Text = "Data de encerramento:";
+            // 
+            // txtDataEntrada
+            // 
+            this.txtDataEntrada.Location = new System.Drawing.Point(395, 250);
+            this.txtDataEntrada.Name = "txtDataEntrada";
+            this.txtDataEntrada.Size = new System.Drawing.Size(75, 23);
+            this.txtDataEntrada.TabIndex = 21;
+            this.txtDataEntrada.Click += new System.EventHandler(this.metroTextBox1_Click);
+            // 
+            // txtDataEncerramento
+            // 
+            this.txtDataEncerramento.Location = new System.Drawing.Point(654, 250);
+            this.txtDataEncerramento.Name = "txtDataEncerramento";
+            this.txtDataEncerramento.Size = new System.Drawing.Size(75, 23);
+            this.txtDataEncerramento.TabIndex = 22;
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Location = new System.Drawing.Point(23, 453);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(94, 20);
+            this.metroLabel12.TabIndex = 23;
+            this.metroLabel12.Text = "Equipamento:";
+            // 
+            // txtEquipamento
+            // 
+            this.txtEquipamento.Location = new System.Drawing.Point(23, 488);
+            this.txtEquipamento.Name = "txtEquipamento";
+            this.txtEquipamento.Size = new System.Drawing.Size(532, 23);
+            this.txtEquipamento.TabIndex = 24;
+            // 
             // frmAbrirOrdem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 560);
+            this.ClientSize = new System.Drawing.Size(850, 600);
+            this.Controls.Add(this.txtEquipamento);
+            this.Controls.Add(this.metroLabel12);
+            this.Controls.Add(this.txtDataEncerramento);
+            this.Controls.Add(this.txtDataEntrada);
+            this.Controls.Add(this.metroLabel11);
+            this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.metroLabel9);
             this.Controls.Add(this.btnSalvarOrdem);
             this.Controls.Add(this.txtDescricaoOrdem);
@@ -244,5 +305,11 @@
         private MetroFramework.Controls.MetroTextBox txtDescricaoOrdem;
         private MetroFramework.Controls.MetroButton btnSalvarOrdem;
         private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroTextBox txtDataEntrada;
+        private MetroFramework.Controls.MetroTextBox txtDataEncerramento;
+        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroTextBox txtEquipamento;
     }
 }
