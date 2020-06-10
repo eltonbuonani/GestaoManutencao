@@ -115,6 +115,7 @@
             this.btnAcessar.Size = new System.Drawing.Size(150, 70);
             this.btnAcessar.TabIndex = 13;
             this.btnAcessar.Text = "Acessar ";
+            this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click);
             // 
             // btnRecadastrarSenha
             // 

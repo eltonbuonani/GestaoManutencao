@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GestaoManutencao.Modelo;
+using GestaoManutencao.Utilidade;
+using GestaoManutencao.Visual;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +52,32 @@ namespace GestaoManutencao.Visual
             frmAcessoProducao f = new frmAcessoProducao();
             f.ShowDialog();
             f.Dispose();
+        }
+
+        private void btnAcessar_Click(object sender, EventArgs e)
+        {
+            {
+                Controle controle = new Controle();
+                controle.acessar(txtUsuario.Text, txtSenha.Text);
+                if (controle.mensagem.Equals(""))
+                {
+                    if (controle.tem)
+                    {
+                        MessageBox.Show("Logado com sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmAcessoCoordenador f = new frmAcessoCoordenador();
+                        f.ShowDialog();
+                        f.Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login não encontrado, verifique login e senha", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(controle.mensagem);
+                }
+            }
         }
     }
 }

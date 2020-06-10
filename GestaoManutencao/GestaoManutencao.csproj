@@ -62,6 +62,9 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Controle.cs" />
+    <Compile Include="Utilidade\Conexao.cs" />
+    <Compile Include="Utilidade\LoginConexao.cs" />
     <Compile Include="Visual\frmAcessoAnalista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,10 +306,8 @@
     <None Include="Resources\inicial.JPG" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Modelo\" />
     <Folder Include="Negocio\" />
     <Folder Include="Relatorio\" />
-    <Folder Include="Utilidade\" />
     <Folder Include="Validacao\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
