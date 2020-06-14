@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLancarProducao = new MetroFramework.Controls.MetroButton();
-            this.btnCadastrarPecas = new MetroFramework.Controls.MetroButton();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.btnEncerrarOrdem = new MetroFramework.Controls.MetroButton();
             this.btnInspecaoTecnicas = new MetroFramework.Controls.MetroButton();
             this.btnEstoquePecas = new MetroFramework.Controls.MetroButton();
-            this.btnCritiNormal = new MetroFramework.Controls.MetroButton();
-            this.btnCritiAlta = new MetroFramework.Controls.MetroButton();
-            this.btnCritiUrgente = new MetroFramework.Controls.MetroButton();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.OrdensNaFila = new MetroFramework.Controls.MetroButton();
-            this.btnOrdensNoPrazo = new MetroFramework.Controls.MetroButton();
-            this.btnOrdensVencidas = new MetroFramework.Controls.MetroButton();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.btnAbrirOrdem = new MetroFramework.Controls.MetroButton();
             this.btnProducao = new MetroFramework.Controls.MetroButton();
@@ -48,25 +40,18 @@
             this.BtnConsultarOrdem = new MetroFramework.Controls.MetroButton();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.btnNovoUsuario = new MetroFramework.Controls.MetroButton();
-            this.btDefinirProducaoMensal = new MetroFramework.Controls.MetroButton();
+            this.btnCadastrarproduto = new MetroFramework.Controls.MetroButton();
+            this.btnCadPecas = new System.Windows.Forms.Button();
+            this.btnLanProducao = new System.Windows.Forms.Button();
+            this.btnDefProducao = new System.Windows.Forms.Button();
+            this.btnNormal = new System.Windows.Forms.Button();
+            this.btnAlta = new System.Windows.Forms.Button();
+            this.btnUrgente = new System.Windows.Forms.Button();
+            this.btnOrdenFila = new System.Windows.Forms.Button();
+            this.btnOrdenPrazo = new System.Windows.Forms.Button();
+            this.btnOrdenVencida = new System.Windows.Forms.Button();
+            this.btnNovousuario = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnLancarProducao
-            // 
-            this.btnLancarProducao.Location = new System.Drawing.Point(397, 64);
-            this.btnLancarProducao.Name = "btnLancarProducao";
-            this.btnLancarProducao.Size = new System.Drawing.Size(150, 70);
-            this.btnLancarProducao.TabIndex = 71;
-            this.btnLancarProducao.Text = "Lançar Produção";
-            // 
-            // btnCadastrarPecas
-            // 
-            this.btnCadastrarPecas.Location = new System.Drawing.Point(42, 64);
-            this.btnCadastrarPecas.Name = "btnCadastrarPecas";
-            this.btnCadastrarPecas.Size = new System.Drawing.Size(150, 70);
-            this.btnCadastrarPecas.TabIndex = 70;
-            this.btnCadastrarPecas.Text = "Cadastrar Peças";
             // 
             // metroLabel5
             // 
@@ -78,89 +63,44 @@
             // 
             // btnEncerrarOrdem
             // 
-            this.btnEncerrarOrdem.Location = new System.Drawing.Point(612, 463);
+            this.btnEncerrarOrdem.Location = new System.Drawing.Point(754, 573);
             this.btnEncerrarOrdem.Name = "btnEncerrarOrdem";
             this.btnEncerrarOrdem.Size = new System.Drawing.Size(150, 70);
             this.btnEncerrarOrdem.TabIndex = 68;
             this.btnEncerrarOrdem.Text = "Encerrar ordem";
+            this.btnEncerrarOrdem.Click += new System.EventHandler(this.btnEncerrarOrdem_Click);
             // 
             // btnInspecaoTecnicas
             // 
-            this.btnInspecaoTecnicas.Location = new System.Drawing.Point(612, 11);
+            this.btnInspecaoTecnicas.Location = new System.Drawing.Point(754, 121);
             this.btnInspecaoTecnicas.Name = "btnInspecaoTecnicas";
             this.btnInspecaoTecnicas.Size = new System.Drawing.Size(150, 70);
             this.btnInspecaoTecnicas.TabIndex = 67;
             this.btnInspecaoTecnicas.Text = "Inspeções Técnicas";
+            this.btnInspecaoTecnicas.Click += new System.EventHandler(this.btnInspecaoTecnicas_Click);
             // 
             // btnEstoquePecas
             // 
-            this.btnEstoquePecas.Location = new System.Drawing.Point(612, 367);
+            this.btnEstoquePecas.Location = new System.Drawing.Point(754, 477);
             this.btnEstoquePecas.Name = "btnEstoquePecas";
             this.btnEstoquePecas.Size = new System.Drawing.Size(150, 70);
             this.btnEstoquePecas.TabIndex = 66;
             this.btnEstoquePecas.Text = "Estoque de Peças";
-            // 
-            // btnCritiNormal
-            // 
-            this.btnCritiNormal.Location = new System.Drawing.Point(393, 373);
-            this.btnCritiNormal.Name = "btnCritiNormal";
-            this.btnCritiNormal.Size = new System.Drawing.Size(150, 70);
-            this.btnCritiNormal.TabIndex = 65;
-            this.btnCritiNormal.Text = "C - Normal";
-            // 
-            // btnCritiAlta
-            // 
-            this.btnCritiAlta.Location = new System.Drawing.Point(212, 373);
-            this.btnCritiAlta.Name = "btnCritiAlta";
-            this.btnCritiAlta.Size = new System.Drawing.Size(150, 70);
-            this.btnCritiAlta.TabIndex = 64;
-            this.btnCritiAlta.Text = "B - Alta";
-            // 
-            // btnCritiUrgente
-            // 
-            this.btnCritiUrgente.Location = new System.Drawing.Point(38, 373);
-            this.btnCritiUrgente.Name = "btnCritiUrgente";
-            this.btnCritiUrgente.Size = new System.Drawing.Size(150, 70);
-            this.btnCritiUrgente.TabIndex = 63;
-            this.btnCritiUrgente.Text = "A - Urgente";
+            this.btnEstoquePecas.Click += new System.EventHandler(this.btnEstoquePecas_Click);
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(213, 329);
+            this.metroLabel4.Location = new System.Drawing.Point(295, 438);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(149, 20);
             this.metroLabel4.TabIndex = 62;
             this.metroLabel4.Text = "Criticidade das Ordens";
             // 
-            // OrdensNaFila
-            // 
-            this.OrdensNaFila.Location = new System.Drawing.Point(397, 208);
-            this.OrdensNaFila.Name = "OrdensNaFila";
-            this.OrdensNaFila.Size = new System.Drawing.Size(150, 70);
-            this.OrdensNaFila.TabIndex = 61;
-            this.OrdensNaFila.Text = "Ordens na Fila";
-            // 
-            // btnOrdensNoPrazo
-            // 
-            this.btnOrdensNoPrazo.Location = new System.Drawing.Point(216, 208);
-            this.btnOrdensNoPrazo.Name = "btnOrdensNoPrazo";
-            this.btnOrdensNoPrazo.Size = new System.Drawing.Size(150, 70);
-            this.btnOrdensNoPrazo.TabIndex = 60;
-            this.btnOrdensNoPrazo.Text = "Ordens no Prazo";
-            // 
-            // btnOrdensVencidas
-            // 
-            this.btnOrdensVencidas.Location = new System.Drawing.Point(42, 208);
-            this.btnOrdensVencidas.Name = "btnOrdensVencidas";
-            this.btnOrdensVencidas.Size = new System.Drawing.Size(150, 70);
-            this.btnOrdensVencidas.TabIndex = 59;
-            this.btnOrdensVencidas.Text = "Ordens Vencidas";
-            // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(239, 164);
+            this.metroLabel3.Location = new System.Drawing.Point(312, 256);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(107, 20);
             this.metroLabel3.TabIndex = 58;
@@ -176,27 +116,30 @@
             // 
             // btnProducao
             // 
-            this.btnProducao.Location = new System.Drawing.Point(612, 96);
+            this.btnProducao.Location = new System.Drawing.Point(754, 206);
             this.btnProducao.Name = "btnProducao";
             this.btnProducao.Size = new System.Drawing.Size(150, 70);
             this.btnProducao.TabIndex = 56;
             this.btnProducao.Text = "Produção";
+            this.btnProducao.Click += new System.EventHandler(this.btnProducao_Click);
             // 
             // btnEquipamentos
             // 
-            this.btnEquipamentos.Location = new System.Drawing.Point(612, 184);
+            this.btnEquipamentos.Location = new System.Drawing.Point(754, 294);
             this.btnEquipamentos.Name = "btnEquipamentos";
             this.btnEquipamentos.Size = new System.Drawing.Size(150, 70);
             this.btnEquipamentos.TabIndex = 55;
             this.btnEquipamentos.Text = "Equipamentos";
+            this.btnEquipamentos.Click += new System.EventHandler(this.btnEquipamentos_Click);
             // 
             // BtnConsultarOrdem
             // 
-            this.BtnConsultarOrdem.Location = new System.Drawing.Point(612, 278);
+            this.BtnConsultarOrdem.Location = new System.Drawing.Point(754, 388);
             this.BtnConsultarOrdem.Name = "BtnConsultarOrdem";
             this.BtnConsultarOrdem.Size = new System.Drawing.Size(150, 70);
             this.BtnConsultarOrdem.TabIndex = 54;
             this.BtnConsultarOrdem.Text = "Consultar Ordens";
+            this.BtnConsultarOrdem.Click += new System.EventHandler(this.BtnConsultarOrdem_Click);
             // 
             // metroLabel2
             // 
@@ -216,44 +159,146 @@
             this.metroLabel1.TabIndex = 52;
             this.metroLabel1.Text = "Usuário";
             // 
-            // btnNovoUsuario
+            // btnCadastrarproduto
             // 
-            this.btnNovoUsuario.Location = new System.Drawing.Point(216, 501);
-            this.btnNovoUsuario.Name = "btnNovoUsuario";
-            this.btnNovoUsuario.Size = new System.Drawing.Size(150, 70);
-            this.btnNovoUsuario.TabIndex = 72;
-            this.btnNovoUsuario.Text = "Novo Usuário";
-            this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
+            this.btnCadastrarproduto.Location = new System.Drawing.Point(754, 671);
+            this.btnCadastrarproduto.Name = "btnCadastrarproduto";
+            this.btnCadastrarproduto.Size = new System.Drawing.Size(150, 70);
+            this.btnCadastrarproduto.TabIndex = 74;
+            this.btnCadastrarproduto.Text = "Cadastrar Produto";
+            this.btnCadastrarproduto.Click += new System.EventHandler(this.btnCadastrarproduto_Click);
             // 
-            // btDefinirProducaoMensal
+            // btnCadPecas
             // 
-            this.btDefinirProducaoMensal.Location = new System.Drawing.Point(216, 64);
-            this.btDefinirProducaoMensal.Name = "btDefinirProducaoMensal";
-            this.btDefinirProducaoMensal.Size = new System.Drawing.Size(150, 70);
-            this.btDefinirProducaoMensal.TabIndex = 73;
-            this.btDefinirProducaoMensal.Text = "Definir Produção Mensal";
-            this.btDefinirProducaoMensal.Click += new System.EventHandler(this.btDefinirProducaoMensal_Click);
+            this.btnCadPecas.BackColor = System.Drawing.Color.Aqua;
+            this.btnCadPecas.Location = new System.Drawing.Point(111, 121);
+            this.btnCadPecas.Name = "btnCadPecas";
+            this.btnCadPecas.Size = new System.Drawing.Size(150, 80);
+            this.btnCadPecas.TabIndex = 75;
+            this.btnCadPecas.Text = "Cadastrar Peças";
+            this.btnCadPecas.UseVisualStyleBackColor = false;
+            this.btnCadPecas.Click += new System.EventHandler(this.btnCadPecas_Click);
+            // 
+            // btnLanProducao
+            // 
+            this.btnLanProducao.BackColor = System.Drawing.Color.Aqua;
+            this.btnLanProducao.Location = new System.Drawing.Point(475, 121);
+            this.btnLanProducao.Name = "btnLanProducao";
+            this.btnLanProducao.Size = new System.Drawing.Size(150, 80);
+            this.btnLanProducao.TabIndex = 76;
+            this.btnLanProducao.Text = "Lançar Produção";
+            this.btnLanProducao.UseVisualStyleBackColor = false;
+            this.btnLanProducao.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnDefProducao
+            // 
+            this.btnDefProducao.BackColor = System.Drawing.Color.Aqua;
+            this.btnDefProducao.Location = new System.Drawing.Point(295, 121);
+            this.btnDefProducao.Name = "btnDefProducao";
+            this.btnDefProducao.Size = new System.Drawing.Size(150, 80);
+            this.btnDefProducao.TabIndex = 77;
+            this.btnDefProducao.Text = "Definir Produção";
+            this.btnDefProducao.UseVisualStyleBackColor = false;
+            this.btnDefProducao.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnNormal
+            // 
+            this.btnNormal.BackColor = System.Drawing.Color.Green;
+            this.btnNormal.Location = new System.Drawing.Point(475, 477);
+            this.btnNormal.Name = "btnNormal";
+            this.btnNormal.Size = new System.Drawing.Size(150, 80);
+            this.btnNormal.TabIndex = 85;
+            this.btnNormal.Text = "C -Normal";
+            this.btnNormal.UseVisualStyleBackColor = false;
+            this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
+            // 
+            // btnAlta
+            // 
+            this.btnAlta.BackColor = System.Drawing.Color.Yellow;
+            this.btnAlta.Location = new System.Drawing.Point(295, 477);
+            this.btnAlta.Name = "btnAlta";
+            this.btnAlta.Size = new System.Drawing.Size(150, 80);
+            this.btnAlta.TabIndex = 84;
+            this.btnAlta.Text = "B - Alta";
+            this.btnAlta.UseVisualStyleBackColor = false;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
+            // 
+            // btnUrgente
+            // 
+            this.btnUrgente.BackColor = System.Drawing.Color.Red;
+            this.btnUrgente.Location = new System.Drawing.Point(111, 477);
+            this.btnUrgente.Name = "btnUrgente";
+            this.btnUrgente.Size = new System.Drawing.Size(150, 80);
+            this.btnUrgente.TabIndex = 83;
+            this.btnUrgente.Text = "A - Urgente";
+            this.btnUrgente.UseVisualStyleBackColor = false;
+            this.btnUrgente.Click += new System.EventHandler(this.btnUrgente_Click);
+            // 
+            // btnOrdenFila
+            // 
+            this.btnOrdenFila.BackColor = System.Drawing.Color.Green;
+            this.btnOrdenFila.Location = new System.Drawing.Point(475, 294);
+            this.btnOrdenFila.Name = "btnOrdenFila";
+            this.btnOrdenFila.Size = new System.Drawing.Size(150, 80);
+            this.btnOrdenFila.TabIndex = 82;
+            this.btnOrdenFila.Text = "Ordens na Fila";
+            this.btnOrdenFila.UseVisualStyleBackColor = false;
+            this.btnOrdenFila.Click += new System.EventHandler(this.btnOrdenFila_Click);
+            // 
+            // btnOrdenPrazo
+            // 
+            this.btnOrdenPrazo.BackColor = System.Drawing.Color.Yellow;
+            this.btnOrdenPrazo.Location = new System.Drawing.Point(295, 294);
+            this.btnOrdenPrazo.Name = "btnOrdenPrazo";
+            this.btnOrdenPrazo.Size = new System.Drawing.Size(150, 80);
+            this.btnOrdenPrazo.TabIndex = 81;
+            this.btnOrdenPrazo.Text = "Ordens no Prazo";
+            this.btnOrdenPrazo.UseVisualStyleBackColor = false;
+            this.btnOrdenPrazo.Click += new System.EventHandler(this.btnOrdenPrazo_Click);
+            // 
+            // btnOrdenVencida
+            // 
+            this.btnOrdenVencida.BackColor = System.Drawing.Color.Red;
+            this.btnOrdenVencida.Location = new System.Drawing.Point(111, 294);
+            this.btnOrdenVencida.Name = "btnOrdenVencida";
+            this.btnOrdenVencida.Size = new System.Drawing.Size(150, 80);
+            this.btnOrdenVencida.TabIndex = 80;
+            this.btnOrdenVencida.Text = "Ordens Vencidas";
+            this.btnOrdenVencida.UseVisualStyleBackColor = false;
+            this.btnOrdenVencida.Click += new System.EventHandler(this.btnOrdenVencida_Click);
+            // 
+            // btnNovousuario
+            // 
+            this.btnNovousuario.BackColor = System.Drawing.Color.Aqua;
+            this.btnNovousuario.Location = new System.Drawing.Point(295, 573);
+            this.btnNovousuario.Name = "btnNovousuario";
+            this.btnNovousuario.Size = new System.Drawing.Size(150, 80);
+            this.btnNovousuario.TabIndex = 86;
+            this.btnNovousuario.Text = "Novo Usuário";
+            this.btnNovousuario.UseVisualStyleBackColor = false;
+            this.btnNovousuario.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmAcessoCoordenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 594);
-            this.Controls.Add(this.btDefinirProducaoMensal);
-            this.Controls.Add(this.btnNovoUsuario);
-            this.Controls.Add(this.btnLancarProducao);
-            this.Controls.Add(this.btnCadastrarPecas);
+            this.ClientSize = new System.Drawing.Size(950, 800);
+            this.Controls.Add(this.btnNovousuario);
+            this.Controls.Add(this.btnNormal);
+            this.Controls.Add(this.btnAlta);
+            this.Controls.Add(this.btnUrgente);
+            this.Controls.Add(this.btnOrdenFila);
+            this.Controls.Add(this.btnOrdenPrazo);
+            this.Controls.Add(this.btnOrdenVencida);
+            this.Controls.Add(this.btnDefProducao);
+            this.Controls.Add(this.btnLanProducao);
+            this.Controls.Add(this.btnCadPecas);
+            this.Controls.Add(this.btnCadastrarproduto);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.btnEncerrarOrdem);
             this.Controls.Add(this.btnInspecaoTecnicas);
             this.Controls.Add(this.btnEstoquePecas);
-            this.Controls.Add(this.btnCritiNormal);
-            this.Controls.Add(this.btnCritiAlta);
-            this.Controls.Add(this.btnCritiUrgente);
             this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.OrdensNaFila);
-            this.Controls.Add(this.btnOrdensNoPrazo);
-            this.Controls.Add(this.btnOrdensVencidas);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.btnAbrirOrdem);
             this.Controls.Add(this.btnProducao);
@@ -261,7 +306,9 @@
             this.Controls.Add(this.BtnConsultarOrdem);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
             this.Name = "frmAcessoCoordenador";
+            this.Resizable = false;
             this.Text = "Acesso Coordenador";
             this.Load += new System.EventHandler(this.frmAcessoCoordenador_Load);
             this.ResumeLayout(false);
@@ -270,20 +317,11 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroButton btnLancarProducao;
-        private MetroFramework.Controls.MetroButton btnCadastrarPecas;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroButton btnEncerrarOrdem;
         private MetroFramework.Controls.MetroButton btnInspecaoTecnicas;
         private MetroFramework.Controls.MetroButton btnEstoquePecas;
-        private MetroFramework.Controls.MetroButton btnCritiNormal;
-        private MetroFramework.Controls.MetroButton btnCritiAlta;
-        private MetroFramework.Controls.MetroButton btnCritiUrgente;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroButton OrdensNaFila;
-        private MetroFramework.Controls.MetroButton btnOrdensNoPrazo;
-        private MetroFramework.Controls.MetroButton btnOrdensVencidas;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroButton btnAbrirOrdem;
         private MetroFramework.Controls.MetroButton btnProducao;
@@ -291,7 +329,16 @@
         private MetroFramework.Controls.MetroButton BtnConsultarOrdem;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroButton btnNovoUsuario;
-        private MetroFramework.Controls.MetroButton btDefinirProducaoMensal;
+        private MetroFramework.Controls.MetroButton btnCadastrarproduto;
+        private System.Windows.Forms.Button btnCadPecas;
+        private System.Windows.Forms.Button btnLanProducao;
+        private System.Windows.Forms.Button btnDefProducao;
+        private System.Windows.Forms.Button btnNormal;
+        private System.Windows.Forms.Button btnAlta;
+        private System.Windows.Forms.Button btnUrgente;
+        private System.Windows.Forms.Button btnOrdenFila;
+        private System.Windows.Forms.Button btnOrdenPrazo;
+        private System.Windows.Forms.Button btnOrdenVencida;
+        private System.Windows.Forms.Button btnNovousuario;
     }
 }

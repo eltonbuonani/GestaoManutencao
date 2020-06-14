@@ -34,8 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(950, 800);
+            this.MaximizeBox = false;
             this.Name = "frmEstoqueDePecas";
+            this.Resizable = false;
             this.Text = "Estoque De Peças";
             this.Load += new System.EventHandler(this.frmEstoqueDePecas_Load);
             this.ResumeLayout(false);

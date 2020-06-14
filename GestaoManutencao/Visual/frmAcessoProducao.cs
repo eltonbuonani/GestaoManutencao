@@ -108,5 +108,47 @@ namespace GestaoManutencao.Visual
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void btnOrdenVencida_Click(object sender, EventArgs e)
+        {
+            frmOrdensVencidas f = new frmOrdensVencidas();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void btnOrdenPrazo_Click(object sender, EventArgs e)
+        {
+            frmOrdensNoPrazo f = new frmOrdensNoPrazo();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void btnOrdenFila_Click(object sender, EventArgs e)
+        {
+            frmOrdensNaFila f = new frmOrdensNaFila();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void btnUrgente_Click(object sender, EventArgs e)
+        {
+            frmUrgentes f = new frmUrgentes();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            frmAlta f = new frmAlta();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void btnNormal_Click(object sender, EventArgs e)
+        {
+            frmNormal f = new frmNormal();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }

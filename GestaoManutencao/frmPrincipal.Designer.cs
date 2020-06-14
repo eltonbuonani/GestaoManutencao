@@ -37,8 +37,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::GestaoManutencao.Properties.Resources.inicial;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 86);
+            this.pictureBox1.Location = new System.Drawing.Point(105, 125);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(326, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -48,22 +49,24 @@
             // 
             // btnAcessar
             // 
-            this.btnAcessar.Location = new System.Drawing.Point(136, 305);
+            this.btnAcessar.Location = new System.Drawing.Point(244, 374);
             this.btnAcessar.Name = "btnAcessar";
             this.btnAcessar.Size = new System.Drawing.Size(150, 70);
             this.btnAcessar.TabIndex = 14;
             this.btnAcessar.Text = "Acessar ";
+            this.btnAcessar.UseMnemonic = false;
             this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click_1);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 425);
+            this.ClientSize = new System.Drawing.Size(600, 500);
             this.Controls.Add(this.btnAcessar);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmPrincipal";
             this.Text = "Software de Gestão de Manutenção";
+            this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

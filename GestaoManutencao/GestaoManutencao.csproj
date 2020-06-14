@@ -62,8 +62,26 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="gestaoManutencaoDataSet.cs">
+      <DependentUpon>gestaoManutencaoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="gestaoManutencaoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gestaoManutencaoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="gestaoManutencaoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gestaoManutencaoDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Controle.cs" />
+    <Compile Include="Utilidade\AbrirOrdem.cs" />
+    <Compile Include="Utilidade\CadastrarPecas.cs" />
+    <Compile Include="Utilidade\CadastrarProduto.cs" />
     <Compile Include="Utilidade\Conexao.cs" />
+    <Compile Include="Utilidade\DefProd.cs" />
+    <Compile Include="Utilidade\LancarProducao.cs" />
     <Compile Include="Utilidade\LoginConexao.cs" />
     <Compile Include="Visual\frmAcessoAnalista.cs">
       <SubType>Form</SubType>
@@ -88,6 +106,12 @@
     </Compile>
     <Compile Include="Visual\frmCadastrarPecas.Designer.cs">
       <DependentUpon>frmCadastrarPecas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\frmCadastrarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\frmCadastrarProduto.Designer.cs">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\frmDefinirProdMensal.cs">
       <SubType>Form</SubType>
@@ -220,6 +244,9 @@
     <EmbeddedResource Include="Visual\frmCadastrarPecas.resx">
       <DependentUpon>frmCadastrarPecas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visual\frmCadastrarProduto.resx">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visual\frmDefinirProdMensal.resx">
       <DependentUpon>frmDefinirProdMensal.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +314,28 @@
     <EmbeddedResource Include="Visual\frmRecadastrarSenha.resx">
       <DependentUpon>frmRecadastrarSenha.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="gestaoManutencaoDataSet.xsc">
+      <DependentUpon>gestaoManutencaoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gestaoManutencaoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gestaoManutencaoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gestaoManutencaoDataSet.xss">
+      <DependentUpon>gestaoManutencaoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gestaoManutencaoDataSet1.xsc">
+      <DependentUpon>gestaoManutencaoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="gestaoManutencaoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gestaoManutencaoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gestaoManutencaoDataSet1.xss">
+      <DependentUpon>gestaoManutencaoDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -303,6 +352,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\InspeçãoTecnicaMod.png" />
+    <None Include="Resources\abrirordem.png" />
+    <None Include="Resources\icons8-em-espiral-ligado-livreto-751.png" />
+    <None Include="Resources\delete %285%29.png" />
+    <None Include="Resources\to-do-list %281%29.png" />
+    <None Include="Resources\fundo2.png" />
+    <None Include="Resources\fundo1.png" />
+    <None Include="Resources\icons8-salvar-e-fechar-641.png" />
     <None Include="Resources\inicial.JPG" />
   </ItemGroup>
   <ItemGroup>

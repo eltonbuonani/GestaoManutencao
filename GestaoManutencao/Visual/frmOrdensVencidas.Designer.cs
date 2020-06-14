@@ -34,8 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(950, 800);
+            this.MaximizeBox = false;
             this.Name = "frmOrdensVencidas";
+            this.Resizable = false;
             this.Text = "Lista de Ordens Vencidas";
             this.Load += new System.EventHandler(this.frmOrdensVencidas_Load);
             this.ResumeLayout(false);

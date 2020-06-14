@@ -22,5 +22,10 @@ namespace GestaoManutencao.Visual
         {
 
         }
+
+        private void btnRecadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

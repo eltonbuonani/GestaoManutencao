@@ -1,4 +1,5 @@
 ﻿using System;
+using GestaoManutencao.Modelo;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,22 @@ namespace GestaoManutencao.Visual
 
         private void frmCadastrarPecas_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnCadastrarPecas_Click(object sender, EventArgs e)
+        {
+            Controle controle = new Controle();
+            String mensagem = controle.cadastrarPecas(txtDescricao.Text, cbxTipoUniComp.Text, txtQuantidade.Text);
+            if(controle.tem)//msg de sucesso
+            {
+                MessageBox.Show(mensagem, "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show(controle.mensagem); //msg de erro
+            }
 
         }
     }

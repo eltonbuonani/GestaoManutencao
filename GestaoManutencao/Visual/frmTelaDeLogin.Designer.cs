@@ -34,7 +34,7 @@
             this.btnAcessarManu = new MetroFramework.Controls.MetroButton();
             this.txtSenha = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txtUsuario = new MetroFramework.Controls.MetroTextBox();
+            this.txtCracha = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnAcessar = new MetroFramework.Controls.MetroButton();
             this.btnRecadastrarSenha = new MetroFramework.Controls.MetroButton();
@@ -78,10 +78,11 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(172, 151);
+            this.txtSenha.Location = new System.Drawing.Point(205, 151);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(163, 23);
-            this.txtSenha.TabIndex = 17;
+            this.txtSenha.TabIndex = 2;
             // 
             // metroLabel2
             // 
@@ -92,28 +93,28 @@
             this.metroLabel2.TabIndex = 16;
             this.metroLabel2.Text = "Senha:";
             // 
-            // txtUsuario
+            // txtCracha
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(172, 97);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(163, 23);
-            this.txtUsuario.TabIndex = 15;
+            this.txtCracha.Location = new System.Drawing.Point(205, 97);
+            this.txtCracha.Name = "txtCracha";
+            this.txtCracha.Size = new System.Drawing.Size(163, 23);
+            this.txtCracha.TabIndex = 1;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(97, 97);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(59, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(77, 20);
             this.metroLabel1.TabIndex = 14;
-            this.metroLabel1.Text = "Usuário:";
+            this.metroLabel1.Text = "N° Usuário";
             // 
             // btnAcessar
             // 
             this.btnAcessar.Location = new System.Drawing.Point(172, 213);
             this.btnAcessar.Name = "btnAcessar";
             this.btnAcessar.Size = new System.Drawing.Size(150, 70);
-            this.btnAcessar.TabIndex = 13;
+            this.btnAcessar.TabIndex = 3;
             this.btnAcessar.Text = "Acessar ";
             this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click);
             // 
@@ -122,7 +123,7 @@
             this.btnRecadastrarSenha.Location = new System.Drawing.Point(172, 325);
             this.btnRecadastrarSenha.Name = "btnRecadastrarSenha";
             this.btnRecadastrarSenha.Size = new System.Drawing.Size(150, 70);
-            this.btnRecadastrarSenha.TabIndex = 12;
+            this.btnRecadastrarSenha.TabIndex = 4;
             this.btnRecadastrarSenha.Text = "Recadastrar Senha";
             // 
             // frmTelaDeLogin
@@ -136,11 +137,13 @@
             this.Controls.Add(this.btnAcessarManu);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtCracha);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.btnAcessar);
             this.Controls.Add(this.btnRecadastrarSenha);
+            this.MaximizeBox = false;
             this.Name = "frmTelaDeLogin";
+            this.Resizable = false;
             this.Text = "Tela De Login";
             this.Load += new System.EventHandler(this.frmTelaDeLogin_Load);
             this.ResumeLayout(false);
@@ -156,7 +159,7 @@
         private MetroFramework.Controls.MetroButton btnAcessarManu;
         private MetroFramework.Controls.MetroTextBox txtSenha;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox txtUsuario;
+        private MetroFramework.Controls.MetroTextBox txtCracha;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton btnAcessar;
         private MetroFramework.Controls.MetroButton btnRecadastrarSenha;

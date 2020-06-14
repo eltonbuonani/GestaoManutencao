@@ -1,4 +1,5 @@
 ﻿using System;
+using GestaoManutencao.Modelo;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,21 @@ namespace GestaoManutencao.Visual
         private void frmDefinirProdMensal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDefinirProd_Click(object sender, EventArgs e)
+        {
+            Controle controle = new Controle();
+            String mensagem = controle.definirProd(txtProduto.Text, txtQuantidadeMensal.Text);
+            if (controle.tem)//msg de sucesso
+            {
+                MessageBox.Show(mensagem, "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show(controle.mensagem); //msg de erro
+            }
         }
     }
 }

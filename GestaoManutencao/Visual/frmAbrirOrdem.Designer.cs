@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -35,23 +36,32 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.txtNumOrdemdeServico = new MetroFramework.Controls.MetroTextBox();
-            this.txtPessoaResponsavel = new MetroFramework.Controls.MetroTextBox();
             this.txtPecasNecessarias = new MetroFramework.Controls.MetroTextBox();
             this.txtDescriServico = new MetroFramework.Controls.MetroTextBox();
-            this.txtCriticidade = new MetroFramework.Controls.MetroTextBox();
-            this.txtSetorResp = new MetroFramework.Controls.MetroTextBox();
-            this.txtTipoOrdem = new MetroFramework.Controls.MetroTextBox();
             this.txtDescricaoOrdem = new MetroFramework.Controls.MetroTextBox();
-            this.btnSalvarOrdem = new MetroFramework.Controls.MetroButton();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.txtDataEntrada = new MetroFramework.Controls.MetroTextBox();
-            this.txtDataEncerramento = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.txtEquipamento = new MetroFramework.Controls.MetroTextBox();
+            this.btnSalvarOrdem = new MetroFramework.Controls.MetroButton();
+            this.cbxTipoManutencao = new System.Windows.Forms.ComboBox();
+            this.cbxSetorResp = new System.Windows.Forms.ComboBox();
+            this.cbxCriticidade = new System.Windows.Forms.ComboBox();
+            this.cbxEquipamento = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.txtPessoaResp = new MetroFramework.Controls.MetroTextBox();
+            this.gestaoManutencaoDataSet = new GestaoManutencao.gestaoManutencaoDataSet();
+            this.gestaoManutencaoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gestaoManutencaoDataSet1 = new GestaoManutencao.gestaoManutencaoDataSet1();
+            this.tblOrdemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_OrdemTableAdapter = new GestaoManutencao.gestaoManutencaoDataSet1TableAdapters.tbl_OrdemTableAdapter();
+            this.tblCriticidadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_CriticidadeTableAdapter = new GestaoManutencao.gestaoManutencaoDataSet1TableAdapters.tbl_CriticidadeTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.gestaoManutencaoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestaoManutencaoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestaoManutencaoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblOrdemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCriticidadeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -77,9 +87,9 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(23, 165);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(106, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(139, 20);
             this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "Tipo da Ordem:";
+            this.metroLabel3.Text = "Tipo da manutenção:";
             // 
             // metroLabel4
             // 
@@ -93,16 +103,17 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(23, 248);
+            this.metroLabel5.Location = new System.Drawing.Point(25, 309);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(77, 20);
             this.metroLabel5.TabIndex = 4;
             this.metroLabel5.Text = "Criticidade:";
+            this.metroLabel5.Click += new System.EventHandler(this.metroLabel5_Click);
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(23, 291);
+            this.metroLabel6.Location = new System.Drawing.Point(25, 343);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(244, 20);
             this.metroLabel6.TabIndex = 5;
@@ -111,165 +122,201 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(23, 370);
+            this.metroLabel7.Location = new System.Drawing.Point(25, 422);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(122, 20);
             this.metroLabel7.TabIndex = 6;
             this.metroLabel7.Text = "Peças necessárias:";
             // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(335, 211);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(135, 20);
-            this.metroLabel8.TabIndex = 7;
-            this.metroLabel8.Text = "Pessoa Responsável:";
-            // 
             // txtNumOrdemdeServico
             // 
-            this.txtNumOrdemdeServico.Location = new System.Drawing.Point(173, 75);
+            this.txtNumOrdemdeServico.Location = new System.Drawing.Point(235, 75);
             this.txtNumOrdemdeServico.Name = "txtNumOrdemdeServico";
-            this.txtNumOrdemdeServico.Size = new System.Drawing.Size(75, 23);
+            this.txtNumOrdemdeServico.Size = new System.Drawing.Size(130, 23);
             this.txtNumOrdemdeServico.TabIndex = 8;
-            // 
-            // txtPessoaResponsavel
-            // 
-            this.txtPessoaResponsavel.Location = new System.Drawing.Point(482, 211);
-            this.txtPessoaResponsavel.Name = "txtPessoaResponsavel";
-            this.txtPessoaResponsavel.Size = new System.Drawing.Size(75, 23);
-            this.txtPessoaResponsavel.TabIndex = 10;
             // 
             // txtPecasNecessarias
             // 
-            this.txtPecasNecessarias.Location = new System.Drawing.Point(25, 409);
+            this.txtPecasNecessarias.Location = new System.Drawing.Point(27, 461);
             this.txtPecasNecessarias.Name = "txtPecasNecessarias";
-            this.txtPecasNecessarias.Size = new System.Drawing.Size(532, 23);
+            this.txtPecasNecessarias.Size = new System.Drawing.Size(852, 23);
             this.txtPecasNecessarias.TabIndex = 11;
             // 
             // txtDescriServico
             // 
-            this.txtDescriServico.Location = new System.Drawing.Point(25, 324);
+            this.txtDescriServico.Location = new System.Drawing.Point(27, 376);
             this.txtDescriServico.Name = "txtDescriServico";
-            this.txtDescriServico.Size = new System.Drawing.Size(527, 23);
+            this.txtDescriServico.Size = new System.Drawing.Size(852, 23);
             this.txtDescriServico.TabIndex = 12;
-            // 
-            // txtCriticidade
-            // 
-            this.txtCriticidade.Location = new System.Drawing.Point(173, 250);
-            this.txtCriticidade.Name = "txtCriticidade";
-            this.txtCriticidade.Size = new System.Drawing.Size(75, 23);
-            this.txtCriticidade.TabIndex = 13;
-            // 
-            // txtSetorResp
-            // 
-            this.txtSetorResp.Location = new System.Drawing.Point(173, 211);
-            this.txtSetorResp.Name = "txtSetorResp";
-            this.txtSetorResp.Size = new System.Drawing.Size(156, 23);
-            this.txtSetorResp.TabIndex = 14;
-            // 
-            // txtTipoOrdem
-            // 
-            this.txtTipoOrdem.Location = new System.Drawing.Point(173, 159);
-            this.txtTipoOrdem.Name = "txtTipoOrdem";
-            this.txtTipoOrdem.Size = new System.Drawing.Size(197, 23);
-            this.txtTipoOrdem.TabIndex = 15;
             // 
             // txtDescricaoOrdem
             // 
-            this.txtDescricaoOrdem.Location = new System.Drawing.Point(173, 117);
+            this.txtDescricaoOrdem.Location = new System.Drawing.Point(235, 117);
             this.txtDescricaoOrdem.Name = "txtDescricaoOrdem";
             this.txtDescricaoOrdem.Size = new System.Drawing.Size(384, 23);
             this.txtDescricaoOrdem.TabIndex = 16;
             // 
-            // btnSalvarOrdem
-            // 
-            this.btnSalvarOrdem.Location = new System.Drawing.Point(654, 488);
-            this.btnSalvarOrdem.Name = "btnSalvarOrdem";
-            this.btnSalvarOrdem.Size = new System.Drawing.Size(150, 70);
-            this.btnSalvarOrdem.TabIndex = 17;
-            this.btnSalvarOrdem.Text = "Salvar ordem";
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(451, 162);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(365, 20);
-            this.metroLabel9.TabIndex = 18;
-            this.metroLabel9.Text = "Ordem corretiva, ordem programada ou inspeção técnica";
-            // 
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(283, 253);
+            this.metroLabel10.Location = new System.Drawing.Point(520, 309);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(111, 20);
             this.metroLabel10.TabIndex = 19;
             this.metroLabel10.Text = "Data de entrada:";
             // 
-            // metroLabel11
-            // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(496, 253);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(152, 20);
-            this.metroLabel11.TabIndex = 20;
-            this.metroLabel11.Text = "Data de encerramento:";
-            // 
             // txtDataEntrada
             // 
-            this.txtDataEntrada.Location = new System.Drawing.Point(395, 250);
+            this.txtDataEntrada.Location = new System.Drawing.Point(663, 309);
             this.txtDataEntrada.Name = "txtDataEntrada";
-            this.txtDataEntrada.Size = new System.Drawing.Size(75, 23);
+            this.txtDataEntrada.Size = new System.Drawing.Size(103, 23);
             this.txtDataEntrada.TabIndex = 21;
             this.txtDataEntrada.Click += new System.EventHandler(this.metroTextBox1_Click);
-            // 
-            // txtDataEncerramento
-            // 
-            this.txtDataEncerramento.Location = new System.Drawing.Point(654, 250);
-            this.txtDataEncerramento.Name = "txtDataEncerramento";
-            this.txtDataEncerramento.Size = new System.Drawing.Size(75, 23);
-            this.txtDataEncerramento.TabIndex = 22;
             // 
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(23, 453);
+            this.metroLabel12.Location = new System.Drawing.Point(25, 505);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(94, 20);
             this.metroLabel12.TabIndex = 23;
             this.metroLabel12.Text = "Equipamento:";
             // 
-            // txtEquipamento
+            // btnSalvarOrdem
             // 
-            this.txtEquipamento.Location = new System.Drawing.Point(23, 488);
-            this.txtEquipamento.Name = "txtEquipamento";
-            this.txtEquipamento.Size = new System.Drawing.Size(532, 23);
-            this.txtEquipamento.TabIndex = 24;
+            this.btnSalvarOrdem.Location = new System.Drawing.Point(395, 654);
+            this.btnSalvarOrdem.Name = "btnSalvarOrdem";
+            this.btnSalvarOrdem.Size = new System.Drawing.Size(150, 70);
+            this.btnSalvarOrdem.TabIndex = 17;
+            this.btnSalvarOrdem.Text = "Salvar ordem";
+            this.btnSalvarOrdem.Click += new System.EventHandler(this.btnSalvarOrdem_Click);
+            // 
+            // cbxTipoManutencao
+            // 
+            this.cbxTipoManutencao.FormattingEnabled = true;
+            this.cbxTipoManutencao.Items.AddRange(new object[] {
+            "Preventiva",
+            "Corretiva",
+            "Inspeção técnica"});
+            this.cbxTipoManutencao.Location = new System.Drawing.Point(235, 161);
+            this.cbxTipoManutencao.Name = "cbxTipoManutencao";
+            this.cbxTipoManutencao.Size = new System.Drawing.Size(203, 24);
+            this.cbxTipoManutencao.TabIndex = 25;
+            // 
+            // cbxSetorResp
+            // 
+            this.cbxSetorResp.FormattingEnabled = true;
+            this.cbxSetorResp.Items.AddRange(new object[] {
+            "Mecânica",
+            "Elétrica",
+            "Automação"});
+            this.cbxSetorResp.Location = new System.Drawing.Point(235, 202);
+            this.cbxSetorResp.Name = "cbxSetorResp";
+            this.cbxSetorResp.Size = new System.Drawing.Size(203, 24);
+            this.cbxSetorResp.TabIndex = 26;
+            // 
+            // cbxCriticidade
+            // 
+            this.cbxCriticidade.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblOrdemBindingSource, "ID_Criticidade", true));
+            this.cbxCriticidade.DataSource = this.tblCriticidadeBindingSource;
+            this.cbxCriticidade.DisplayMember = "crit_Tipo";
+            this.cbxCriticidade.FormattingEnabled = true;
+            this.cbxCriticidade.Location = new System.Drawing.Point(190, 305);
+            this.cbxCriticidade.Name = "cbxCriticidade";
+            this.cbxCriticidade.Size = new System.Drawing.Size(153, 24);
+            this.cbxCriticidade.TabIndex = 27;
+            this.cbxCriticidade.ValueMember = "ID_Criticidade";
+            // 
+            // cbxEquipamento
+            // 
+            this.cbxEquipamento.FormattingEnabled = true;
+            this.cbxEquipamento.ItemHeight = 24;
+            this.cbxEquipamento.Items.AddRange(new object[] {
+            "Despaletizador",
+            "Inspetor latas vazias",
+            "Enchedora ",
+            "Lacrador ",
+            "Inspetor latas cheias ",
+            "Pasteurizador ",
+            "Embaladora ",
+            "Mesa programadora ",
+            "Paletizador ",
+            "Envolvedor "});
+            this.cbxEquipamento.Location = new System.Drawing.Point(159, 505);
+            this.cbxEquipamento.Name = "cbxEquipamento";
+            this.cbxEquipamento.Size = new System.Drawing.Size(345, 30);
+            this.cbxEquipamento.TabIndex = 28;
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(26, 259);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(132, 20);
+            this.metroLabel8.TabIndex = 29;
+            this.metroLabel8.Text = "Pessoa responsável:";
+            this.metroLabel8.Click += new System.EventHandler(this.metroLabel8_Click);
+            // 
+            // txtPessoaResp
+            // 
+            this.txtPessoaResp.Location = new System.Drawing.Point(235, 256);
+            this.txtPessoaResp.Name = "txtPessoaResp";
+            this.txtPessoaResp.Size = new System.Drawing.Size(195, 23);
+            this.txtPessoaResp.TabIndex = 30;
+            this.txtPessoaResp.Click += new System.EventHandler(this.metroTextBox1_Click_1);
+            // 
+            // gestaoManutencaoDataSet
+            // 
+            this.gestaoManutencaoDataSet.DataSetName = "gestaoManutencaoDataSet";
+            this.gestaoManutencaoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gestaoManutencaoDataSetBindingSource
+            // 
+            this.gestaoManutencaoDataSetBindingSource.DataSource = this.gestaoManutencaoDataSet;
+            this.gestaoManutencaoDataSetBindingSource.Position = 0;
+            // 
+            // gestaoManutencaoDataSet1
+            // 
+            this.gestaoManutencaoDataSet1.DataSetName = "gestaoManutencaoDataSet1";
+            this.gestaoManutencaoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblOrdemBindingSource
+            // 
+            this.tblOrdemBindingSource.DataMember = "tbl_Ordem";
+            this.tblOrdemBindingSource.DataSource = this.gestaoManutencaoDataSet1;
+            // 
+            // tbl_OrdemTableAdapter
+            // 
+            this.tbl_OrdemTableAdapter.ClearBeforeFill = true;
+            // 
+            // tblCriticidadeBindingSource
+            // 
+            this.tblCriticidadeBindingSource.DataMember = "tbl_Criticidade";
+            this.tblCriticidadeBindingSource.DataSource = this.gestaoManutencaoDataSet1;
+            // 
+            // tbl_CriticidadeTableAdapter
+            // 
+            this.tbl_CriticidadeTableAdapter.ClearBeforeFill = true;
             // 
             // frmAbrirOrdem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 600);
-            this.Controls.Add(this.txtEquipamento);
+            this.ClientSize = new System.Drawing.Size(950, 800);
+            this.Controls.Add(this.txtPessoaResp);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.cbxEquipamento);
+            this.Controls.Add(this.cbxCriticidade);
+            this.Controls.Add(this.cbxSetorResp);
+            this.Controls.Add(this.cbxTipoManutencao);
             this.Controls.Add(this.metroLabel12);
-            this.Controls.Add(this.txtDataEncerramento);
             this.Controls.Add(this.txtDataEntrada);
-            this.Controls.Add(this.metroLabel11);
             this.Controls.Add(this.metroLabel10);
-            this.Controls.Add(this.metroLabel9);
             this.Controls.Add(this.btnSalvarOrdem);
             this.Controls.Add(this.txtDescricaoOrdem);
-            this.Controls.Add(this.txtTipoOrdem);
-            this.Controls.Add(this.txtSetorResp);
-            this.Controls.Add(this.txtCriticidade);
             this.Controls.Add(this.txtDescriServico);
             this.Controls.Add(this.txtPecasNecessarias);
-            this.Controls.Add(this.txtPessoaResponsavel);
             this.Controls.Add(this.txtNumOrdemdeServico);
-            this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
@@ -280,6 +327,11 @@
             this.Name = "frmAbrirOrdem";
             this.Text = "Abrir Ordem de Serviço";
             this.Load += new System.EventHandler(this.frmAbrirOrdem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gestaoManutencaoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestaoManutencaoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gestaoManutencaoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblOrdemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCriticidadeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,22 +346,26 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroTextBox txtNumOrdemdeServico;
-        private MetroFramework.Controls.MetroTextBox txtPessoaResponsavel;
         private MetroFramework.Controls.MetroTextBox txtPecasNecessarias;
         private MetroFramework.Controls.MetroTextBox txtDescriServico;
-        private MetroFramework.Controls.MetroTextBox txtCriticidade;
-        private MetroFramework.Controls.MetroTextBox txtSetorResp;
-        private MetroFramework.Controls.MetroTextBox txtTipoOrdem;
         private MetroFramework.Controls.MetroTextBox txtDescricaoOrdem;
-        private MetroFramework.Controls.MetroButton btnSalvarOrdem;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroTextBox txtDataEntrada;
-        private MetroFramework.Controls.MetroTextBox txtDataEncerramento;
         private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MetroFramework.Controls.MetroTextBox txtEquipamento;
+        private MetroFramework.Controls.MetroButton btnSalvarOrdem;
+        private System.Windows.Forms.ComboBox cbxTipoManutencao;
+        private System.Windows.Forms.ComboBox cbxSetorResp;
+        private System.Windows.Forms.ComboBox cbxCriticidade;
+        private MetroFramework.Controls.MetroComboBox cbxEquipamento;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroTextBox txtPessoaResp;
+        private System.Windows.Forms.BindingSource gestaoManutencaoDataSetBindingSource;
+        private gestaoManutencaoDataSet gestaoManutencaoDataSet;
+        private gestaoManutencaoDataSet1 gestaoManutencaoDataSet1;
+        private System.Windows.Forms.BindingSource tblOrdemBindingSource;
+        private gestaoManutencaoDataSet1TableAdapters.tbl_OrdemTableAdapter tbl_OrdemTableAdapter;
+        private System.Windows.Forms.BindingSource tblCriticidadeBindingSource;
+        private gestaoManutencaoDataSet1TableAdapters.tbl_CriticidadeTableAdapter tbl_CriticidadeTableAdapter;
     }
 }
